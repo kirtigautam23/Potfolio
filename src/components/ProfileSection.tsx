@@ -8,7 +8,12 @@ export function ProfileSection() {
     <section className="section profile-section">
       <div className="profile-card">
         <div className="profile-photo">
-          <img src={brand.ladyBossProfile} alt="Ms. Kirti Gautam, founder of Masterpiece" />
+          <img
+            src={brand.ladyBossProfile}
+            alt="Ms. Kirti Gautam, founder of Masterpiece"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
 
         <div className="profile-copy">

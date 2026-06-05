@@ -9,7 +9,7 @@ type PageIntroProps = {
 export function PageIntro({ eyebrow, title, description }: PageIntroProps) {
   return (
     <section className="page-intro">
-      <img src={brand.namasteProfile} alt="" aria-hidden="true" />
+      <img src={brand.namasteProfile} alt="" aria-hidden="true" loading="eager" decoding="async" />
       <div className="hero-panel hero-panel-left"></div>
       <div className="hero-panel hero-panel-center"></div>
       <div className="hero-panel hero-panel-right"></div>

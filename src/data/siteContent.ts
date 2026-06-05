@@ -1,29 +1,16 @@
 import logo from '../assets/masterpiece/logo/logo2.jpeg'
-import mark from '../assets/masterpiece/logo/mark.jpeg'
-import owner from '../assets/masterpiece/logo/owner.jpeg'
-import heroPhoto from '../assets/masterpiece/photos/academy-room.avif'
 import namasteProfile from '../assets/masterpiece/photos/namaste-profile.jpeg'
-import ladyBossProfile from '../assets/masterpiece/photos/lady-boss-profile.jpeg'
-import ritualPhoto from '../assets/masterpiece/photos/studio-ritual.webp'
-import beautySession from '../assets/masterpiece/photos/beauty-session.jpg'
-import portfolioPhoto from '../assets/masterpiece/photos/makeup-portfolio.jpg'
+import ladyBossProfile from '../assets/masterpiece/optimized/lady-boss-profile.jpg'
 import mapQr from '../assets/masterpiece/generated/map-qr.png'
 import googleReviewQr from '../assets/masterpiece/generated/qr-google-review.png'
 import whatsappQr from '../assets/masterpiece/generated/qr-whatsapp.png'
 import instagramQr from '../assets/masterpiece/generated/qr-instagram.png'
 import facebookQr from '../assets/masterpiece/generated/qr-facebook.png'
 import tiktokQr from '../assets/masterpiece/generated/qr-tiktok.png'
-import basicPoster from '../assets/masterpiece/posters/basic-beautician.png'
-import advancePoster from '../assets/masterpiece/posters/advance-beautician.png'
-import diplomaPoster from '../assets/masterpiece/posters/diploma-cosmetology.png'
-import selfMakeupPoster from '../assets/masterpiece/posters/self-makeup.png'
-import nailPoster from '../assets/masterpiece/posters/nail-class.png'
-import waxPoster from '../assets/masterpiece/posters/wax-course.png'
-import trainingPoster from '../assets/masterpiece/posters/training.png'
 import tenInOne from '../assets/masterpiece/products/ten-in-one.jpeg'
 import wellFaceWash from '../assets/masterpiece/products/well10-face-wash.jpg'
 import wellSunscreen from '../assets/masterpiece/products/well10-sunscreen.jpg'
-import wellMoisturizer from '../assets/masterpiece/products/well10-moisturizer.png'
+import wellMoisturizer from '../assets/masterpiece/optimized/well10-moisturizer.jpg'
 import wellSerum from '../assets/masterpiece/products/well10-serum.jpg'
 
 export type Course = {
@@ -32,7 +19,6 @@ export type Course = {
   duration: string
   level: string
   description: string
-  poster: string
   highlights: string[]
 }
 
@@ -74,11 +60,8 @@ export const brand = {
   locationName: 'Tilottama-3, Shankarnagar, Sitaricemill',
   mapUrl: 'https://maps.app.goo.gl/mvgyUAmwAfCRYXyY7',
   logo,
-  mark,
-  owner,
   namasteProfile,
   ladyBossProfile,
-  heroPhoto,
   mapQr,
   socialLinks: {
     instagram:
@@ -158,7 +141,6 @@ export const courses: Course[] = [
     level: 'Beginner friendly',
     description:
       'A practical foundation course for students starting a professional beauty career.',
-    poster: basicPoster,
     highlights: ['Threading', 'Waxing', 'Facial', 'Hair wash', 'Mehendi', 'Client consultation'],
   },
   {
@@ -168,7 +150,6 @@ export const courses: Course[] = [
     level: 'Advanced',
     description:
       'Advanced salon skills for learners who want stronger technique and professional confidence.',
-    poster: advancePoster,
     highlights: ['Hair straight', 'Keratin smoothing', 'Bridal hairstyles', 'Makeup', 'Skin analysis'],
   },
   {
@@ -178,7 +159,6 @@ export const courses: Course[] = [
     level: 'Career program',
     description:
       'A complete cosmetology pathway covering skin, hair, makeup, hygiene, and salon management.',
-    poster: diplomaPoster,
     highlights: ['Skin science', 'Hair science', 'Chemical treatments', 'Nail art', 'Salon management'],
   },
   {
@@ -188,7 +168,6 @@ export const courses: Course[] = [
     level: 'Personal grooming',
     description:
       'Learn everyday looks, product knowledge, skin prep, and confident self makeup routines.',
-    poster: selfMakeupPoster,
     highlights: ['Skin knowledge', 'Eyebrow shaping', 'Everyday makeup', 'Full glam', 'Product knowledge'],
   },
   {
@@ -198,7 +177,6 @@ export const courses: Course[] = [
     level: 'Nail techniques',
     description:
       'A hands-on nail class covering prep, shaping, gel polish, extensions, and basic nail art.',
-    poster: nailPoster,
     highlights: ['Nail anatomy', 'Cuticle cleaning', 'Gel polish', 'Extensions', 'Nail art'],
   },
   {
@@ -208,7 +186,6 @@ export const courses: Course[] = [
     level: 'Service skill',
     description:
       'Focused training for waxing and essential beauty service routines with hygiene-first practice.',
-    poster: waxPoster,
     highlights: ['Waxing hygiene', 'Full body waxing', 'Client care', 'Aftercare', 'Salon confidence'],
   },
 ]
@@ -299,13 +276,6 @@ export const products: Product[] = [
     badge: 'Preview',
     image: wellSerum,
   },
-]
-
-export const galleryImages = [
-  { src: ritualPhoto, alt: 'Masterpiece smooth skin beauty ritual' },
-  { src: beautySession, alt: 'Masterpiece beauty training session' },
-  { src: portfolioPhoto, alt: 'Masterpiece makeup and beauty portfolio' },
-  { src: trainingPoster, alt: 'Masterpiece academy training poster' },
 ]
 
 export const benefits = [

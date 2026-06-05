@@ -18,7 +18,7 @@ export function Navbar({ siteTheme, onThemeChange }: NavbarProps) {
   return (
     <header className="site-header">
       <NavLink className="brand-link" to="/" aria-label="Masterpiece home">
-        <img src={brand.logo} alt={brand.name} />
+        <img src={brand.logo} alt={brand.name} fetchPriority="high" decoding="async" />
         <span>{brand.shortName}</span>
       </NavLink>
 

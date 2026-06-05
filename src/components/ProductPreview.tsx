@@ -22,7 +22,7 @@ export function ProductPreview() {
           <article className="product-card" key={product.id}>
             <div className="product-image">
               <span>{product.badge}</span>
-              <img src={product.image} alt={product.name} loading="lazy" />
+              <img src={product.image} alt={product.name} loading="lazy" decoding="async" />
             </div>
             <h3>{product.name}</h3>
             <p className="product-price">

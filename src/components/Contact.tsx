@@ -26,7 +26,12 @@ export function Contact({ compact = false }: ContactProps) {
           return (
             <article className="scan-card" key={scan.id}>
               <div className="scan-card-image">
-                <img src={scan.image} alt={`${scan.eyebrow} QR scan for Masterpiece`} />
+                <img
+                  src={scan.image}
+                  alt={`${scan.eyebrow} QR scan for Masterpiece`}
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
               <div className="scan-card-copy">
                 <span className="contact-tag">{scan.eyebrow}</span>
@@ -46,7 +51,12 @@ export function Contact({ compact = false }: ContactProps) {
 
         <article className="scan-card scan-card-location">
           <div className="scan-card-image">
-            <img src={brand.mapQr} alt="Google Maps QR for Masterpiece location" />
+            <img
+              src={brand.mapQr}
+              alt="Google Maps QR for Masterpiece location"
+              loading="lazy"
+              decoding="async"
+            />
           </div>
           <div className="scan-card-copy">
             <span className="contact-tag">Location</span>

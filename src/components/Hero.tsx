@@ -13,6 +13,8 @@ export function Hero() {
           className="hero-backdrop"
           src={brand.namasteProfile}
           alt="Masterpiece beauty professional"
+          fetchPriority="high"
+          decoding="async"
         />
         <div className="hero-panel hero-panel-left"></div>
         <div className="hero-panel hero-panel-center"></div>
