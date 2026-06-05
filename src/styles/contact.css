@@ -1,0 +1,268 @@
+.contact-section {
+  width: 100%;
+  padding-right: 48px;
+  padding-left: 48px;
+  background:
+    radial-gradient(circle at 18% 18%, rgba(216, 169, 61, 0.16), transparent 26rem),
+    radial-gradient(circle at 84% 60%, rgba(216, 169, 61, 0.1), transparent 24rem),
+    linear-gradient(120deg, rgba(216, 169, 61, 0.1), transparent 42%),
+    #171514;
+}
+
+.contact-section-compact {
+  border-top: 1px solid rgba(216, 169, 61, 0.24);
+}
+
+.contact-section .section-header h2 {
+  color: var(--cream);
+}
+
+.contact-section .section-header p:not(.eyebrow) {
+  color: var(--muted);
+}
+
+.contact-showcase {
+  display: grid;
+  grid-template-columns: minmax(320px, 0.82fr) minmax(0, 1fr);
+  gap: 34px;
+  align-items: center;
+  width: min(100%, 1240px);
+  margin: 0 auto;
+}
+
+.contact-scan-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  width: min(100%, 1240px);
+  margin: 0 auto;
+}
+
+.scan-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(116px, 0.74fr) minmax(0, 1fr);
+  gap: 18px;
+  align-items: center;
+  overflow: hidden;
+  min-height: 260px;
+  padding: 18px;
+  border: 1px solid rgba(216, 169, 61, 0.34);
+  color: var(--cream);
+  background:
+    linear-gradient(145deg, rgba(248, 244, 235, 0.08), rgba(17, 19, 18, 0.84)),
+    #151716;
+  box-shadow: 0 22px 62px rgba(0, 0, 0, 0.3);
+  transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+}
+
+.scan-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(115deg, transparent 0 66%, rgba(216, 169, 61, 0.16) 66% 66.3%, transparent 66.3%),
+    radial-gradient(circle at 20% 18%, rgba(216, 169, 61, 0.14), transparent 14rem);
+  pointer-events: none;
+}
+
+.scan-card:hover,
+.scan-card:focus-within {
+  border-color: rgba(244, 210, 120, 0.72);
+  box-shadow: var(--deep-shadow), var(--gold-glow);
+  transform: translate3d(0, -7px, 0);
+}
+
+.scan-card-image {
+  position: relative;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border: 1px solid rgba(216, 169, 61, 0.44);
+  background:
+    radial-gradient(circle at 50% 45%, rgba(244, 210, 120, 0.16), transparent 8rem),
+    #f8f4eb;
+  box-shadow: 8px 9px 0 rgba(216, 169, 61, 0.18);
+}
+
+.scan-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 10px;
+}
+
+.scan-card-copy {
+  position: relative;
+  z-index: 1;
+}
+
+.scan-card h3 {
+  margin-top: 8px;
+  font-family: var(--serif);
+  font-size: clamp(1.55rem, 2.8vw, 2.4rem);
+  line-height: 1.02;
+}
+
+.scan-card p {
+  margin-top: 10px;
+  color: var(--muted);
+}
+
+.scan-link,
+.scan-only {
+  display: inline-flex;
+  margin-top: 16px;
+  color: var(--gold-soft);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.scan-link:hover,
+.scan-link:focus-visible {
+  color: var(--cream);
+}
+
+.scan-only {
+  color: rgba(248, 244, 235, 0.62);
+}
+
+.contact-direct-strip {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  width: min(100%, 960px);
+  margin: 42px auto 0;
+}
+
+.scan-display {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(216, 169, 61, 0.42);
+  padding: 16px;
+  background:
+    linear-gradient(145deg, rgba(216, 169, 61, 0.16), rgba(17, 19, 18, 0.9)),
+    #111312;
+  box-shadow: 20px 20px 0 rgba(216, 169, 61, 0.14), var(--deep-shadow);
+}
+
+.scan-display::before {
+  content: '';
+  position: absolute;
+  inset: 16px;
+  z-index: 1;
+  border: 1px solid rgba(248, 244, 235, 0.2);
+  background:
+    linear-gradient(115deg, transparent 0 58%, rgba(216, 169, 61, 0.2) 58% 58.4%, transparent 58.4%),
+    linear-gradient(180deg, transparent 62%, rgba(17, 19, 18, 0.74));
+  pointer-events: none;
+}
+
+.scan-display img {
+  width: 100%;
+  max-height: 720px;
+  object-fit: cover;
+  object-position: center center;
+  filter: saturate(0.92) contrast(1.04) brightness(0.9);
+}
+
+.scan-caption {
+  position: absolute;
+  right: 34px;
+  bottom: 34px;
+  z-index: 2;
+  max-width: 300px;
+  padding: 18px;
+  border: 1px solid rgba(216, 169, 61, 0.58);
+  background: rgba(17, 19, 18, 0.9);
+  backdrop-filter: blur(12px);
+}
+
+.scan-caption span,
+.contact-tag {
+  color: var(--gold-soft);
+  font-size: 0.74rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.scan-caption strong {
+  display: block;
+  margin-top: 6px;
+  color: var(--cream);
+  font-family: var(--serif);
+  font-size: 1.55rem;
+  line-height: 1.05;
+}
+
+.contact-action-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.contact-card,
+.qr-card {
+  position: relative;
+  overflow: hidden;
+  padding: 30px;
+  color: var(--cream);
+  background:
+    linear-gradient(145deg, rgba(248, 244, 235, 0.08), rgba(17, 19, 18, 0.78)),
+    rgba(32, 36, 38, 0.72);
+  backdrop-filter: blur(10px);
+  transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+}
+
+.contact-card::before,
+.qr-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg, transparent 0 70%, rgba(216, 169, 61, 0.14) 70% 70.3%, transparent 70.3% 100%);
+  pointer-events: none;
+}
+
+.contact-card:hover,
+.qr-card:hover {
+  border-color: rgba(244, 210, 120, 0.7);
+  box-shadow: var(--deep-shadow), var(--gold-glow);
+  transform: translate3d(0, -7px, 0);
+}
+
+.contact-card a,
+.social-card a {
+  display: table;
+  margin-top: 14px;
+  color: var(--gold-soft);
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.contact-card p {
+  margin-top: 16px;
+  color: var(--muted);
+}
+
+.qr-card {
+  display: grid;
+  place-items: center;
+  gap: 14px;
+}
+
+.qr-card img {
+  width: min(100%, 220px);
+  padding: 10px;
+  background: #fff;
+  box-shadow: 10px 10px 0 rgba(216, 169, 61, 0.18);
+}
+
+.qr-card span {
+  color: var(--gold-soft);
+  font-weight: 900;
+}

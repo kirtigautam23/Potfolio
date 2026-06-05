@@ -1,0 +1,254 @@
+.site-shell.theme-light {
+  color: #17120a;
+  background:
+    radial-gradient(circle at 14% 0%, rgba(216, 169, 61, 0.2), transparent 28rem),
+    linear-gradient(180deg, #fffaf0 0%, #f8f4eb 46%, #efe4d2 100%);
+}
+
+.site-shell.theme-light h1,
+.site-shell.theme-light h2,
+.site-shell.theme-light h3 {
+  color: #17120a;
+}
+
+.site-shell.theme-light::before {
+  background:
+    radial-gradient(circle at 18% 18%, rgba(216, 169, 61, 0.24), transparent 32rem),
+    linear-gradient(115deg, transparent 0 42%, rgba(216, 169, 61, 0.16) 42% 42.4%, transparent 42.4% 100%);
+}
+
+.theme-light .site-header {
+  color: #17120a;
+  padding: 18px 22px;
+  border: 1px solid rgba(216, 169, 61, 0.28);
+  border-radius: 0 0 22px 22px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(255, 250, 240, 0.86)),
+    #fffaf0;
+  box-shadow: 0 20px 64px rgba(88, 61, 16, 0.1);
+}
+
+.theme-light .brand-link,
+.theme-light .breadcrumbs a,
+.theme-light .eyebrow,
+.theme-light .course-meta,
+.theme-light .product-category,
+.theme-light .scan-link,
+.theme-light .contact-tag {
+  color: #9b711f;
+}
+
+.theme-light .nav-list a,
+.theme-light .breadcrumbs,
+.theme-light .section-header p:not(.eyebrow),
+.theme-light .hero-text {
+  color: rgba(23, 18, 10, 0.66);
+}
+
+.theme-light .nav-list a:hover,
+.theme-light .nav-list a:focus-visible,
+.theme-light .nav-list a.active {
+  color: #8a641e;
+}
+
+.theme-light .nav-cta {
+  border-color: rgba(216, 169, 61, 0.72);
+  color: #17120a;
+  background: rgba(255, 250, 240, 0.84);
+  box-shadow: 6px 7px 0 rgba(216, 169, 61, 0.16);
+}
+
+.theme-light .site-theme-toggle {
+  border-color: rgba(216, 169, 61, 0.66);
+  background: rgba(255, 250, 240, 0.92);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.72);
+}
+
+.theme-light .site-theme-toggle button {
+  color: rgba(23, 18, 10, 0.58);
+}
+
+.theme-light .site-theme-toggle button.active {
+  color: #17120a;
+}
+
+.theme-light .menu-button {
+  border-color: rgba(216, 169, 61, 0.52);
+  background: rgba(255, 250, 240, 0.86);
+}
+
+.theme-light .nav-list {
+  background: transparent;
+}
+
+.theme-light .hero-section {
+  padding-top: 34px;
+}
+
+.theme-light .hero-stage {
+  border-color: rgba(216, 169, 61, 0.34);
+  box-shadow: 0 24px 74px rgba(88, 61, 16, 0.16), 0 0 0 1px rgba(216, 169, 61, 0.12);
+}
+
+.theme-light .hero-copy h1,
+.theme-light .hero-notes,
+.theme-light .hero-stats span {
+  color: var(--cream);
+}
+
+.theme-light .hero-text {
+  color: rgba(248, 244, 235, 0.76);
+}
+
+.theme-light .section-header h2,
+.theme-light .founder-fact-card strong,
+.theme-light .home-contact-card strong,
+.theme-light .course-content h3,
+.theme-light .product-card h3,
+.theme-light .contact-card h3,
+.theme-light .enrollment-note strong {
+  color: #17120a;
+}
+
+.theme-light .founder-info-section,
+.theme-light .profile-section,
+.theme-light .home-contact-section,
+.theme-light .gallery-section,
+.theme-light .product-section,
+.theme-light .contact-section,
+.theme-light .service-section {
+  background:
+    radial-gradient(circle at 80% 14%, rgba(216, 169, 61, 0.16), transparent 26rem),
+    linear-gradient(120deg, rgba(216, 169, 61, 0.12), transparent 44%),
+    #f8f4eb;
+}
+
+.theme-light .course-card,
+.theme-light .product-card,
+.theme-light .scan-card,
+.theme-light .contact-card,
+.theme-light .qr-card,
+.theme-light .enrollment-form,
+.theme-light .enrollment-note,
+.theme-light .founder-fact-card,
+.theme-light .home-contact-card {
+  color: #17120a;
+  border-color: rgba(216, 169, 61, 0.42);
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.78), rgba(216, 169, 61, 0.12)),
+    #fffaf0;
+  box-shadow: 0 22px 64px rgba(88, 61, 16, 0.14);
+}
+
+.theme-light .course-card::before,
+.theme-light .product-card::before,
+.theme-light .scan-card::before,
+.theme-light .contact-card::before,
+.theme-light .qr-card::before,
+.theme-light .home-contact-card::before {
+  background:
+    linear-gradient(115deg, transparent 0 64%, rgba(216, 169, 61, 0.2) 64% 64.3%, transparent 64.3%),
+    radial-gradient(circle at 18% 18%, rgba(216, 169, 61, 0.12), transparent 14rem);
+}
+
+.theme-light .course-content p,
+.theme-light .product-category,
+.theme-light .scan-card p,
+.theme-light .contact-card p,
+.theme-light .enrollment-note p,
+.theme-light .founder-fact-card p,
+.theme-light .home-contact-card p,
+.theme-light .service-line span,
+.theme-light .profile-signature span,
+.theme-light .site-footer p,
+.theme-light .site-footer a {
+  color: rgba(23, 18, 10, 0.64);
+}
+
+.theme-light .chip-row span,
+.theme-light .form-stepper button,
+.theme-light .form-band,
+.theme-light .enrollment-form input,
+.theme-light .enrollment-form select,
+.theme-light .enrollment-form textarea {
+  color: #17120a;
+  border-color: rgba(216, 169, 61, 0.36);
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.theme-light .form-stepper button.active {
+  color: #17120a;
+  background: linear-gradient(135deg, rgba(216, 169, 61, 0.34), rgba(255, 250, 240, 0.94));
+}
+
+.theme-light .enrollment-form label,
+.theme-light .profile-list li,
+.theme-light .service-line strong {
+  color: #17120a;
+}
+
+.theme-light .product-image {
+  background:
+    radial-gradient(circle at 50% 38%, rgba(244, 210, 120, 0.22), transparent 9rem),
+    linear-gradient(145deg, #fffaf0, #eadbbb);
+}
+
+.theme-light .product-price,
+.theme-light .enrollment-note span,
+.theme-light .form-band span,
+.theme-light .book-page > p,
+.theme-light .service-line em {
+  color: #9b711f;
+}
+
+.theme-light .button-ghost,
+.theme-light .button-shadow {
+  color: #17120a;
+  background: rgba(255, 250, 240, 0.74);
+}
+
+.theme-light .button-shadow {
+  box-shadow: 7px 8px 0 rgba(216, 169, 61, 0.18);
+}
+
+.theme-light .site-footer {
+  background: #f8f4eb;
+}
+
+.theme-dark .site-header {
+  padding: 28px 0 18px;
+  border: 0;
+  border-radius: 0;
+}
+
+.theme-dark .service-book {
+  border-color: var(--line);
+  background: rgba(32, 36, 38, 0.74);
+}
+
+.theme-dark .service-book::before {
+  border-left-color: rgba(248, 244, 235, 0.18);
+  background:
+    linear-gradient(90deg, rgba(248, 244, 235, 0.16), rgba(17, 19, 18, 0.9)),
+    linear-gradient(135deg, rgba(216, 169, 61, 0.12), transparent);
+}
+
+.theme-dark .book-page {
+  background:
+    linear-gradient(90deg, rgba(216, 169, 61, 0.1), transparent 18%),
+    linear-gradient(135deg, rgba(248, 244, 235, 0.08), rgba(17, 19, 18, 0.8));
+  box-shadow: inset -20px 0 44px rgba(0, 0, 0, 0.22);
+}
+
+.theme-dark .book-page + .book-page {
+  border-left-color: var(--line);
+}
+
+.theme-dark .book-page h3,
+.theme-dark .service-line strong {
+  color: var(--cream);
+}
+
+.theme-dark .service-line span {
+  color: var(--muted);
+}

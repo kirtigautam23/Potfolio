@@ -1,0 +1,226 @@
+.service-section {
+  width: 100%;
+  padding-right: 24px;
+  padding-left: 24px;
+  background:
+    linear-gradient(120deg, rgba(216, 169, 61, 0.1), transparent 42%),
+    #171514;
+  color: var(--cream);
+}
+
+.service-section .section-header h2,
+.service-section .book-page h3 {
+  color: var(--cream);
+}
+
+.service-section .section-header p:not(.eyebrow) {
+  color: var(--muted);
+}
+
+.book-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.book-controls {
+  justify-content: center;
+}
+
+.book-controls button {
+  min-width: 96px;
+  min-height: 42px;
+  border: 1px solid var(--line);
+  color: var(--cream);
+  background: transparent;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: 6px 7px 0 rgba(255, 255, 255, 0.12);
+  transition: transform 180ms ease, border-color 180ms ease, color 180ms ease;
+}
+
+.book-controls button:hover,
+.book-controls button:focus-visible {
+  border-color: var(--gold-soft);
+  color: var(--gold-soft);
+  transform: translate3d(0, -3px, 0);
+}
+
+.book-controls span {
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.service-book {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: min(100%, 1100px);
+  margin: 0 auto;
+  border: 1px solid rgba(216, 169, 61, 0.42);
+  background: #f8f4eb;
+  box-shadow: 18px 18px 0 rgba(216, 169, 61, 0.12), var(--deep-shadow);
+  perspective: 1500px;
+  transform-style: preserve-3d;
+}
+
+.service-book::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  z-index: 4;
+  width: 50%;
+  border-left: 1px solid rgba(23, 20, 18, 0.16);
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.5), rgba(196, 155, 62, 0.2)),
+    linear-gradient(135deg, rgba(216, 169, 61, 0.18), transparent);
+  box-shadow: -24px 0 52px rgba(0, 0, 0, 0.32);
+  opacity: 0;
+  transform: rotateY(0);
+  transform-origin: left center;
+  pointer-events: none;
+}
+
+.service-book.is-turning::before {
+  animation: pageFlipNext 620ms cubic-bezier(0.22, 0.8, 0.24, 1);
+}
+
+.service-book-previous.is-turning::before {
+  left: 0;
+  transform-origin: right center;
+  animation-name: pageFlipPrevious;
+}
+
+.book-page {
+  min-height: 460px;
+  padding: 38px;
+  background:
+    linear-gradient(90deg, rgba(216, 169, 61, 0.18), transparent 18%),
+    linear-gradient(135deg, #fffaf0, #eee3cf);
+  box-shadow: inset -20px 0 44px rgba(23, 19, 14, 0.1);
+  transform: rotateY(2deg);
+  transform-origin: right center;
+}
+
+.book-page + .book-page {
+  border-left: 1px solid rgba(23, 20, 18, 0.12);
+  transform-origin: left center;
+  transform: rotateY(-2deg);
+  animation: pageTurn 620ms ease;
+}
+
+.book-page h3,
+.service-line strong {
+  color: #17120a;
+}
+
+.service-line span {
+  color: rgba(23, 18, 10, 0.64);
+}
+
+@keyframes pageTurn {
+  from {
+    transform: rotateY(-22deg);
+    opacity: 0.62;
+  }
+  to {
+    transform: rotateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pageFlipNext {
+  0% {
+    opacity: 0;
+    transform: rotateY(0deg);
+  }
+  18% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0.95;
+    transform: rotateY(-78deg);
+  }
+  100% {
+    opacity: 0;
+    transform: rotateY(-164deg);
+  }
+}
+
+@keyframes pageFlipPrevious {
+  0% {
+    opacity: 0;
+    transform: rotateY(0deg);
+  }
+  18% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0.95;
+    transform: rotateY(78deg);
+  }
+  100% {
+    opacity: 0;
+    transform: rotateY(164deg);
+  }
+}
+
+.book-page > p {
+  color: var(--gold-soft);
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.book-page h3 {
+  margin-top: 8px;
+  font-family: var(--serif);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1;
+}
+
+.service-list {
+  display: grid;
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.service-line {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 18px;
+  align-items: start;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(216, 169, 61, 0.22);
+  transition: transform 180ms ease, border-color 180ms ease;
+}
+
+.service-line:hover {
+  border-color: rgba(244, 210, 120, 0.62);
+  transform: translateX(8px);
+}
+
+.service-line strong,
+.service-line span,
+.service-line em {
+  display: block;
+}
+
+.service-line strong {
+  font-size: 1.06rem;
+}
+
+.service-line span {
+  color: var(--muted);
+}
+
+.service-line em {
+  color: #8a641e;
+  font-style: normal;
+  font-weight: 900;
+  white-space: nowrap;
+}
