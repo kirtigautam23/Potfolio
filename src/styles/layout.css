@@ -26,7 +26,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 32px;
+  gap: clamp(14px, 2vw, 28px);
   width: calc(100% - 48px);
   max-width: 1440px;
   margin: 0 auto;
@@ -38,15 +38,15 @@
 .brand-link {
   display: inline-flex;
   align-items: center;
-  gap: 16px;
+  gap: clamp(10px, 1.2vw, 16px);
   width: auto;
   color: var(--gold-soft);
   text-decoration: none;
 }
 
 .brand-link img {
-  width: 76px;
-  height: 76px;
+  width: clamp(54px, 5vw, 76px);
+  height: clamp(54px, 5vw, 76px);
   border: 1px solid rgba(216, 169, 61, 0.42);
   border-radius: 50%;
   object-fit: cover;
@@ -55,22 +55,23 @@
 
 .brand-link span {
   font-family: var(--serif);
-  font-size: clamp(1.2rem, 2vw, 2rem);
+  font-size: clamp(1.15rem, 1.75vw, 1.82rem);
   font-weight: 800;
-  letter-spacing: 0.42em;
+  letter-spacing: clamp(0.18em, 0.72vw, 0.42em);
   text-transform: uppercase;
 }
 
 .nav-list {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: clamp(2px, 0.55vw, 8px);
 }
 
 .nav-list a {
   color: var(--muted);
   font-weight: 700;
-  padding: 10px 14px;
+  padding: 10px clamp(8px, 0.85vw, 14px);
+  font-size: clamp(0.88rem, 0.94vw, 1rem);
   text-decoration: none;
   transition:
     color 180ms ease,
@@ -102,31 +103,30 @@
 
 .site-theme-toggle {
   display: inline-grid;
-  grid-template-columns: repeat(2, minmax(68px, 1fr));
-  overflow: hidden;
+  width: 44px;
+  height: 44px;
+  flex: 0 0 auto;
+  place-items: center;
   border: 1px solid rgba(216, 169, 61, 0.48);
   border-radius: 999px;
   background: rgba(17, 19, 18, 0.64);
-}
-
-.site-theme-toggle button {
-  min-height: 40px;
-  border: 0;
-  color: var(--muted);
-  background: transparent;
-  font-size: 0.72rem;
-  font-weight: 900;
-  text-transform: uppercase;
+  color: var(--gold-soft);
   cursor: pointer;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background 180ms ease;
 }
 
-.site-theme-toggle button + button {
-  border-left: 1px solid rgba(216, 169, 61, 0.28);
+.site-theme-toggle:hover,
+.site-theme-toggle:focus-visible {
+  transform: translateY(-2px);
+  border-color: var(--gold-soft);
 }
 
-.site-theme-toggle button.active {
-  color: #17120a;
-  background: linear-gradient(135deg, var(--gold), var(--gold-soft));
+.site-theme-toggle span {
+  font-size: 1.28rem;
+  line-height: 1;
 }
 
 .breadcrumbs {

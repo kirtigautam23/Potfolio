@@ -1,3 +1,30 @@
+@media (max-width: 1320px) {
+  .site-header {
+    gap: 16px;
+    width: calc(100% - 32px);
+  }
+
+  .brand-link img {
+    width: 62px;
+    height: 62px;
+  }
+
+  .brand-link span {
+    font-size: 1.42rem;
+    letter-spacing: 0.28em;
+  }
+
+  .nav-list a {
+    padding-inline: 10px;
+    font-size: 0.93rem;
+  }
+
+  .nav-cta {
+    min-width: 104px;
+    padding-inline: 14px;
+  }
+}
+
 @media (max-width: 1180px) {
   .about-section,
   .profile-card,
@@ -27,10 +54,10 @@
   }
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 1120px) {
   .site-header {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-columns: minmax(0, 1fr) auto auto auto;
     width: calc(100% - 32px);
     max-width: 1440px;
     gap: 14px 18px;
@@ -49,8 +76,8 @@
     place-content: center;
     border: 1px solid var(--line);
     background: var(--charcoal);
-    grid-column: 1 / -1;
-    justify-self: center;
+    grid-column: 2;
+    justify-self: end;
   }
 
   .menu-button span:not(.sr-only) {
@@ -82,10 +109,12 @@
   }
 
   .nav-cta {
+    grid-column: 4;
     justify-self: end;
   }
 
   .site-theme-toggle {
+    grid-column: 3;
     justify-self: end;
   }
 }
@@ -103,7 +132,8 @@
   .site-theme-toggle {
     grid-column: 2;
     justify-self: center;
-    width: min(100%, 168px);
+    width: 42px;
+    height: 42px;
   }
 
   .menu-button {
@@ -120,8 +150,8 @@
   }
 
   .brand-link span {
-    font-size: 1.05rem;
-    letter-spacing: 0.24em;
+    font-size: 1rem;
+    letter-spacing: 0.2em;
   }
 }
 
@@ -380,8 +410,8 @@
   }
 
   .brand-link img {
-    width: 58px;
-    height: 58px;
+    width: 50px;
+    height: 50px;
   }
 
   .brand-link span {
@@ -389,13 +419,12 @@
   }
 
   .site-theme-toggle {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    width: 132px;
+    width: 38px;
+    height: 38px;
   }
 
-  .site-theme-toggle button {
-    min-height: 38px;
-    font-size: 0.64rem;
+  .site-theme-toggle span {
+    font-size: 1.12rem;
   }
 
   .nav-cta {

@@ -13,6 +13,7 @@ type NavbarProps = {
 
 export function Navbar({ siteTheme, onThemeChange }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false)
+  const nextTheme = siteTheme === 'light' ? 'dark' : 'light'
 
   return (
     <header className="site-header">
@@ -48,24 +49,15 @@ export function Navbar({ siteTheme, onThemeChange }: NavbarProps) {
         ))}
       </nav>
 
-      <div className="site-theme-toggle" aria-label="Website background mode">
-        <button
-          className={siteTheme === 'light' ? 'active' : undefined}
-          type="button"
-          onClick={() => onThemeChange('light')}
-          aria-pressed={siteTheme === 'light'}
-        >
-          White
-        </button>
-        <button
-          className={siteTheme === 'dark' ? 'active' : undefined}
-          type="button"
-          onClick={() => onThemeChange('dark')}
-          aria-pressed={siteTheme === 'dark'}
-        >
-          Dark
-        </button>
-      </div>
+      <button
+        className="site-theme-toggle"
+        type="button"
+        onClick={() => onThemeChange(nextTheme)}
+        aria-label={`Switch to ${nextTheme === 'light' ? 'white' : 'black'} background`}
+        aria-pressed={siteTheme === 'dark'}
+      >
+        <span aria-hidden="true">{siteTheme === 'light' ? '◐' : '☀'}</span>
+      </button>
 
       <a className="nav-cta" href={createWhatsAppUrl(brand.phone, bookingMessage)}>
         Book Now
