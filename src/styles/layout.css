@@ -101,6 +101,14 @@
   text-transform: uppercase;
 }
 
+.nav-actions {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 14px;
+  flex: 0 0 auto;
+}
+
 .site-theme-toggle {
   display: inline-grid;
   width: 44px;
@@ -187,10 +195,10 @@
 
 .hero-stage .hero-copy {
   position: absolute;
-  top: 158px;
+  top: 120px;
   left: 48px;
   z-index: 3;
-  width: min(50%, 650px);
+  width: min(46%, 620px);
 }
 
 .hero-actions,

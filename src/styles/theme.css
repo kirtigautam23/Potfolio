@@ -97,6 +97,9 @@
 .theme-light .hero-backdrop,
 .theme-light .page-intro img {
   filter: saturate(0.9) contrast(1.02) brightness(1.02);
+  opacity: 0.82;
+  -webkit-mask-image: radial-gradient(ellipse at 58% 52%, #000 0 44%, rgba(0, 0, 0, 0.72) 56%, transparent 76%);
+  mask-image: radial-gradient(ellipse at 58% 52%, #000 0 44%, rgba(0, 0, 0, 0.72) 56%, transparent 76%);
 }
 
 .theme-light .hero-stage::before,

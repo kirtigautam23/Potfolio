@@ -93,7 +93,7 @@
 }
 
 .hero-copy h1 {
-  max-width: 720px;
+  max-width: 620px;
   margin-top: 18px;
   font-size: clamp(3.2rem, 4.4vw, 5.25rem);
   line-height: 1.02;
@@ -105,15 +105,13 @@
 }
 
 .stat-row {
-  margin-top: 52px;
+  margin-top: 30px;
 }
 
 .hero-stats {
-  position: absolute;
-  bottom: 54px;
-  left: 48px;
+  position: relative;
   z-index: 3;
-  margin-top: 0;
+  max-width: 560px;
 }
 
 .hero-stats div,
@@ -123,8 +121,8 @@
 }
 
 .stat-row div {
-  min-width: 142px;
-  padding-left: 18px;
+  min-width: 132px;
+  padding-left: 16px;
   border-left: 1px solid var(--line);
 }
 
@@ -132,13 +130,17 @@
   display: block;
   color: var(--gold-soft);
   font-family: var(--serif);
-  font-size: 2.2rem;
+  font-size: clamp(1.6rem, 2.4vw, 2rem);
   line-height: 1;
 }
 
 .stat-row span {
   color: var(--muted);
+  display: block;
+  max-width: 120px;
+  font-size: 0.86rem;
   font-weight: 700;
+  line-height: 1.25;
 }
 
 .hero-notes {

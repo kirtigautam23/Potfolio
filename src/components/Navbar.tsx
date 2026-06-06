@@ -49,19 +49,21 @@ export function Navbar({ siteTheme, onThemeChange }: NavbarProps) {
         ))}
       </nav>
 
-      <button
-        className="site-theme-toggle"
-        type="button"
-        onClick={() => onThemeChange(nextTheme)}
-        aria-label={`Switch to ${nextTheme === 'light' ? 'white' : 'black'} background`}
-        aria-pressed={siteTheme === 'dark'}
-      >
-        <span aria-hidden="true">{siteTheme === 'light' ? '◐' : '☀'}</span>
-      </button>
+      <div className="nav-actions">
+        <button
+          className="site-theme-toggle"
+          type="button"
+          onClick={() => onThemeChange(nextTheme)}
+          aria-label={`Switch to ${nextTheme === 'light' ? 'white' : 'black'} background`}
+          aria-pressed={siteTheme === 'dark'}
+        >
+          <span aria-hidden="true">{siteTheme === 'light' ? '◐' : '☀'}</span>
+        </button>
 
-      <a className="nav-cta" href={createWhatsAppUrl(brand.phone, bookingMessage)}>
-        Book Now
-      </a>
+        <a className="nav-cta" href={createWhatsAppUrl(brand.phone, bookingMessage)}>
+          Book Now
+        </a>
+      </div>
     </header>
   )
 }

@@ -38,6 +38,15 @@ export function Hero() {
               Book Consultation
             </a>
           </div>
+
+          <div className="stat-row hero-stats" aria-label="Masterpiece highlights">
+            {stats.map((stat) => (
+              <div key={stat.label}>
+                <strong>{stat.value}</strong>
+                <span>{stat.label}</span>
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className="hero-notes">
@@ -46,14 +55,6 @@ export function Hero() {
           <span>Professional studio and academy</span>
         </div>
 
-        <div className="stat-row hero-stats" aria-label="Masterpiece highlights">
-          {stats.map((stat) => (
-            <div key={stat.label}>
-              <strong>{stat.value}</strong>
-              <span>{stat.label}</span>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   )
